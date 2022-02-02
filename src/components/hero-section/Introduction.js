@@ -2,7 +2,7 @@ import React from "react";
 
 function Introduction() {
   return (
-    <div className="container mx-96 items-center mx-auto pt-8">
+    <div className="mx-96 pt-8">
       <p className="text-5xl mx-4 pt-1 font-display tracking-widest pl-7 mt-1 leading-relaxed">
         No reactions to your reddit posts?
       </p>
