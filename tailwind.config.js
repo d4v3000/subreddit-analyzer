@@ -10,6 +10,13 @@ module.exports = {
       fontFamily: {
         mono: ["Montserrat", ...defaultTheme.fontFamily.sans],
       },
+      fontSize: {
+        "5xl": ["38px", "46px"],
+        sm: ["16px", "20px"],
+      },
+      letterSpacing: {
+        widest: ".0575em",
+      },
       colors: {
         orange: {
           100: "#FDB755",
@@ -23,6 +30,7 @@ module.exports = {
         42: "10.25rem",
         53: "13.25rem",
         54: "13.5rem",
+        58: "14.25rem",
         68: "17rem",
         69: "17.25rem",
         70: "17.5rem",
