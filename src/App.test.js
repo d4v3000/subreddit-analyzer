@@ -20,4 +20,20 @@ describe("Header", () => {
       expect(screen.getByRole("heading", name)).toBeInTheDocument();
     }
   );
+
+  test("logo points to homepage", () => {
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+
+    const link = screen.getByRole("link", { name: /logo/i });
+
+    userEvent.click(link);
+
+    expect(
+      screen.getByRole("heading", { name: /no reactions/i })
+    ).toBeInTheDocument();
+  });
 });

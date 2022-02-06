@@ -7,7 +7,7 @@ function NavBar() {
     <div>
       <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 pt-2 rounden dark:bg-gray-800">
         <div className="container mx-auto flex flex-wrap items-center justify-between pt-6">
-          <a href="/">
+          <a href="/" aria-label="logo">
             <ReactSVG src={SvgLogo} />
           </a>
           <div className="flex pt-1 space-x-25 text-gray-500 leading-5 font-mono">

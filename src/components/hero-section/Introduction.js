@@ -3,9 +3,9 @@ import React from "react";
 function Introduction() {
   return (
     <div className="mx-96 pt-8">
-      <p className="text-5xl mx-4 pt-1 font-display tracking-widest pl-7 mt-1 leading-relaxed">
+      <h2 className="text-5xl mx-4 pt-1 font-display tracking-widest pl-7 mt-1 leading-relaxed">
         No reactions to your reddit posts?
-      </p>
+      </h2>
       <p className="pl-8 mt-3 mx-4 text-sm tracking-widest font-mono mb-0.5 text-gray-400">
         Great timing, great results! Find the best time to post on your
         subreddit.
