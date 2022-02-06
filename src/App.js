@@ -5,13 +5,13 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <NavBar />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/search" element={<Search />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 

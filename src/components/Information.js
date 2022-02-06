@@ -5,12 +5,12 @@ function Information() {
     <div className="container items-center mx-auto mt-32">
       <div>
         <div className="my-28 mx-80">
-          <p
+          <h2
             className="text-2xl font-medium mb-3 font-display tracking-widest"
             id="how-it-works"
           >
             How it works
-          </p>
+          </h2>
           <ul className="list-disc list-inside text-gray-800 font-mono">
             <li>
               We find the 500 top posts from the past year for a subreddit.
@@ -23,12 +23,12 @@ function Information() {
           </ul>
         </div>
         <div className="my-10 mx-80 mr-96">
-          <p
+          <h2
             className="text-2xl font-medium mb-3 font-display tracking-widest"
             id="about"
           >
             About
-          </p>
+          </h2>
           <p className="font-mono">
             This app was created to gain some experience with react and web
             development in general. It was created using professional workflows
