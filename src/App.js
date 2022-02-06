@@ -1,16 +1,17 @@
 import NavBar from "./components/NavBar";
-import Hero from "./components/hero-section/Hero";
-import Information from "./components/Information";
+import Homepage from "./components/Homepage";
+import Search from "./components/Search";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <NavBar />
-      <div className="container items-center mx-auto">
-        <Hero />
-        <Information />
-      </div>
-    </div>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/search" element={<Search />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
