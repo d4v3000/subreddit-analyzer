@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
 
-function SearchForm({ onSearch }) {
+function SearchForm({ onSearch, setPosts }) {
   const [subreddit, setSubreddit] = useState("javascript");
 
   const onSubmit = (event) => {
     event.preventDefault();
     onSearch(subreddit);
+    setPosts([]);
   };
 
   return (
