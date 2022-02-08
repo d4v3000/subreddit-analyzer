@@ -1,6 +1,7 @@
 import React from "react";
 import SearchForm from "./SearchForm";
 import { useState, useEffect } from "react";
+import Heatmap from "./Heatmap";
 
 function Search() {
   const [posts, setPosts] = useState([]);
@@ -36,7 +37,12 @@ function Search() {
         </div>
       )}
 
-      {status === "resolved" && <p>{posts.length}</p>}
+      {status === "resolved" && (
+        <>
+          <p>{posts.length}</p>
+          <Heatmap posts={posts} />
+        </>
+      )}
     </div>
   );
 }
