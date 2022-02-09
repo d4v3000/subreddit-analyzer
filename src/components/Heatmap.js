@@ -1,4 +1,6 @@
 import React from "react";
+import PostsTable from "./PostsTable";
+import { useState } from "react";
 
 function Heatmap({ posts }) {
   let sunday = [];
@@ -22,6 +24,8 @@ function Heatmap({ posts }) {
     "8:00pm",
     "10:00pm",
   ];
+  const [detailToggle, setDetailToggle] = useState(false);
+  const [detailPosts, setDetailPosts] = useState([]);
 
   for (let index = 0; index < 24; index++) {
     sunday.push([]);
@@ -51,6 +55,8 @@ function Heatmap({ posts }) {
 
   const clickElement = (element) => (event) => {
     console.log(element);
+    setDetailPosts(element);
+    setDetailToggle(true);
   };
 
   posts.forEach((post) => {
@@ -121,6 +127,8 @@ function Heatmap({ posts }) {
       {makeRow("Thursday", thursday)}
       {makeRow("Friday", friday)}
       {makeRow("Saturday", saturday)}
+
+      {detailToggle && <PostsTable posts={detailPosts} />}
     </div>
   );
 }

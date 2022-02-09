@@ -40,23 +40,6 @@ function Search() {
       {status === "resolved" && (
         <>
           <p>{posts.length}</p>
-          {/* <div className="mx-32 my-20 bg-red-700 grid grid-cols-28 grid-rows-8">
-            <div className="col-start-5 col-span-2 py-2 px-4">12:00am</div>
-            <div className="col-span-2 py-2 px-4">2:00am</div>
-            <div className="col-span-2 py-2 px-4">4:00am</div>
-            <div className="col-span-2 py-2 px-4">6:00am</div>
-            <div className="col-span-2 py-2 px-4">8:00am</div>
-            <div className="col-span-2 py-2 px-4">10:00am</div>
-            <div className="col-span-2 py-2 px-4">12:00am</div>
-            <div className="col-span-2 py-2 px-4">2:00pm</div>
-            <div className="col-span-2 py-2 px-4">4:00pm</div>
-            <div className="col-span-2 py-2 px-4">6:00pm</div>
-            <div className="col-span-2 py-2 px-4">8:00pm</div>
-            <div className="col-span-2 py-2 px-4">10:00pm</div>
-            <div className="px-16 py-2 col-span-4 text-white bg-slate-800 cursor-default">
-              Sunday
-            </div>
-          </div> */}
           <Heatmap posts={posts} />
         </>
       )}
