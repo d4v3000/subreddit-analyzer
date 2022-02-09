@@ -22,6 +22,12 @@ module.exports = {
           100: "#FDB755",
         },
       },
+      gridTemplateColumns: {
+        28: "repeat(28, minmax(0, 1fr))",
+      },
+      gridTemplateRows: {
+        8: "repeat(8, minmax(0, 1fr))",
+      },
       spacing: {
         11.5: "46px",
         13: "3.25rem",

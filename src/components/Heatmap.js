@@ -8,6 +8,20 @@ function Heatmap({ posts }) {
   let thursday = [];
   let friday = [];
   let saturday = [];
+  let hours = [
+    "12:00am",
+    "2:00am",
+    "4:00am",
+    "6:00am",
+    "8:00am",
+    "10:00am",
+    "12:00pm",
+    "2:00pm",
+    "4:00pm",
+    "6:00pm",
+    "8:00pm",
+    "10:00pm",
+  ];
 
   for (let index = 0; index < 24; index++) {
     sunday.push([]);
@@ -63,34 +77,51 @@ function Heatmap({ posts }) {
 
   const makeRow = (day, posts) => {
     return (
-      <tr>
-        <td className="px-8 text-white bg-slate-800 cursor-default">{day}</td>
-        {posts.map((hour) => (
-          <td
-            className={makeClass(hour.length) + " px-4 cursor-pointer"}
+      <>
+        <div className="px-16 py-2 col-span-4 text-white bg-slate-800 cursor-default">
+          {day}
+        </div>
+        {posts.map((hour, i) => (
+          <div
+            className={makeClass(hour.length) + " cursor-pointer py-2 px-4"}
             onClick={clickElement(hour)}
+            key={i}
           >
             {hour.length}
-          </td>
+          </div>
         ))}
-      </tr>
+      </>
     );
   };
 
   return (
-    <>
-      <table>
-        <tbody className="">
-          {makeRow("Sunday", sunday)}
-          {makeRow("Monday", monday)}
-          {makeRow("Tuesday", tuesday)}
-          {makeRow("Wednesday", wednesday)}
-          {makeRow("Thursday", thursday)}
-          {makeRow("Friday", friday)}
-          {makeRow("Saturday", saturday)}
-        </tbody>
-      </table>
-    </>
+    <div className="mx-32 my-20 grid grid-cols-28 grid-rows-8">
+      {hours.map((hour, i) => {
+        if (i === 0) {
+          return (
+            <div
+              className="col-start-5 col-span-2 py-2 px-4 bg-gray-100"
+              key={i}
+            >
+              {hour}
+            </div>
+          );
+        } else {
+          return (
+            <div className="col-span-2 py-2 px-4 bg-gray-100" key={i}>
+              {hour}
+            </div>
+          );
+        }
+      })}
+      {makeRow("Sunday", sunday)}
+      {makeRow("Monday", monday)}
+      {makeRow("Tuesday", tuesday)}
+      {makeRow("Wednesday", wednesday)}
+      {makeRow("Thursday", thursday)}
+      {makeRow("Friday", friday)}
+      {makeRow("Saturday", saturday)}
+    </div>
   );
 }
 
