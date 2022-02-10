@@ -40,15 +40,15 @@ function Heatmap({ posts }) {
   const makeClass = (numberOfPosts) => {
     let background = "";
     if (numberOfPosts === 0) {
-      background = "bg-yellow-100";
+      background = "bg-[#E0E5A3]";
     } else if (numberOfPosts < 4) {
-      background = "bg-green-200";
+      background = "bg-[#A9D194]";
     } else if (numberOfPosts < 6) {
-      background = "bg-green-400";
+      background = "bg-[#8CC894]";
     } else if (numberOfPosts < 10) {
-      background = "bg-green-500";
+      background = "bg-[#5EB391]";
     } else if (numberOfPosts >= 10) {
-      background = "bg-blue-400";
+      background = "bg-[#3984A3]";
     }
     return background;
   };
@@ -84,12 +84,15 @@ function Heatmap({ posts }) {
   const makeRow = (day, posts) => {
     return (
       <>
-        <div className="px-14 py-2 col-span-4 text-white bg-slate-800 cursor-default">
+        <div className="px-14 py-2 col-span-4 text-white bg-slate-800 cursor-default font-mono">
           {day}
         </div>
         {posts.map((hour, i) => (
           <div
-            className={makeClass(hour.length) + " cursor-pointer py-2 px-4"}
+            className={
+              makeClass(hour.length) +
+              " cursor-pointer py-2 px-4 text-white font-medium"
+            }
             onClick={clickElement(hour)}
             key={i}
           >
@@ -106,7 +109,7 @@ function Heatmap({ posts }) {
         if (i === 0) {
           return (
             <div
-              className="col-start-5 col-span-2 py-2 px-4 bg-gray-100"
+              className="col-start-5 col-span-2 py-2 px-4 bg-gray-100 font-mono"
               key={i}
             >
               {hour}
@@ -114,7 +117,7 @@ function Heatmap({ posts }) {
           );
         } else {
           return (
-            <div className="col-span-2 py-2 px-4 bg-gray-100" key={i}>
+            <div className="col-span-2 py-2 px-4 bg-gray-100 font-mono" key={i}>
               {hour}
             </div>
           );

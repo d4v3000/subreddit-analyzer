@@ -20,7 +20,9 @@ function PostsTable({ posts }) {
 
   return (
     <div className="mt-10 mx-40">
-      <h1>Posts</h1>
+      <h1 className="text-3xl my-3 font-display tracking-widest leading-relaxed">
+        Posts
+      </h1>
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-50">
           <tr>
