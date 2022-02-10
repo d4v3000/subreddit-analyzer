@@ -39,7 +39,6 @@ function Search() {
 
       {status === "resolved" && (
         <>
-          <p>{posts.length}</p>
           <Heatmap posts={posts} />
         </>
       )}
