@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../logo/table.png";
+import Logo from "../../assets/table.png";
 
 function Table() {
   return (

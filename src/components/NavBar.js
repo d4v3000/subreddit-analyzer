@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactSVG } from "react-svg";
-import SvgLogo from "../logo/logo.svg";
+import SvgLogo from "../assets/logo.svg";
 
 function NavBar() {
   return (
