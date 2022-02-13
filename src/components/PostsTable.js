@@ -38,6 +38,7 @@ function PostsTable({ posts }) {
         </thead>
         <tbody>
           {posts.map((post) => {
+            // convert time into readable format
             let utcSeconds = post.created_utc;
             let d = new Date(0);
             d.setUTCSeconds(utcSeconds);

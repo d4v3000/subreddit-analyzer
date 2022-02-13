@@ -37,7 +37,7 @@ function Heatmap({ posts }) {
     saturday.push([]);
   }
 
-  const makeClass = (numberOfPosts) => {
+  const makeBackgroundColor = (numberOfPosts) => {
     let background = "";
     if (numberOfPosts === 0) {
       background = "bg-[#E0E5A3]";
@@ -54,7 +54,6 @@ function Heatmap({ posts }) {
   };
 
   const clickElement = (element) => (event) => {
-    console.log(element);
     setDetailPosts(element);
     setDetailToggle(true);
   };
@@ -64,6 +63,7 @@ function Heatmap({ posts }) {
     let d = new Date(0);
     d.setUTCSeconds(utcSeconds);
 
+    // seperate all posts into arrays for each day
     if (d.getDay() === 0) {
       sunday[d.getHours()].push(post.data);
     } else if (d.getDay() === 1) {
@@ -90,7 +90,7 @@ function Heatmap({ posts }) {
         {posts.map((hour, i) => (
           <div
             className={
-              makeClass(hour.length) +
+              makeBackgroundColor(hour.length) +
               " cursor-pointer py-2 px-4 text-white font-medium"
             }
             onClick={clickElement(hour)}

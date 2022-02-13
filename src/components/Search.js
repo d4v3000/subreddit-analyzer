@@ -11,18 +11,20 @@ function Search() {
 
   useEffect(() => {
     if (posts.length < 500 && subreddit) {
-      fetchData();
+      fetchTopPosts();
     }
   }, [subreddit, after]);
 
-  async function fetchData() {
+  async function fetchTopPosts() {
     setStatus("loading");
+    // Max limit is 100 posts per fetch
     const url = `https://www.reddit.com/r/${subreddit}/top.json?t=all&limit=100&after=${after}`;
     const response = await fetch(url);
     const { data } = await response.json();
     data.children.forEach((child) => {
       setPosts((posts) => [...posts, child]);
     });
+    // get the next 100 posts
     setAfter(data.after);
     setStatus("resolved");
   }
