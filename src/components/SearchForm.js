@@ -22,7 +22,7 @@ function SearchForm({ onSearch, setPosts }) {
         </label>
         <input
           type="text"
-          name="subreddit"
+          id="subreddit"
           value={subreddit}
           onChange={(event) => {
             setSubreddit(event.target.value);

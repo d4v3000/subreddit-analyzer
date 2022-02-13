@@ -58,7 +58,7 @@ function PostsTable({ posts }) {
             return (
               <tr key={post.id}>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 truncate max-w-lg text-blue-600">
-                  <a href={link} target="_blank">
+                  <a href={link} target="_blank" rel="noreferrer">
                     {post.title}
                   </a>
                 </td>

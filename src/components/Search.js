@@ -33,7 +33,10 @@ function Search() {
 
       {status === "loading" && (
         <div className="mx-96 my-20">
-          <div className="mx-72 w-8 h-8 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+          <div
+            className="mx-72 w-8 h-8 border-b-2 border-gray-900 rounded-full animate-spin"
+            data-testid="loading-circle"
+          ></div>
         </div>
       )}
 
